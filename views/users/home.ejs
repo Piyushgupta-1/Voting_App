@@ -1,0 +1,38 @@
+<%- include("../layouts/header.ejs") %>
+
+    <h1>Select one candidate to vote</h1>
+
+    <% if(typeof message !=="undefined" ) { %>
+        <p style="color: red;">
+            <%= message %>
+        </p>
+    <% } else if (typeof vmessage !=="undefined" ) { %>
+        <p style="color: green;">
+            <%= vmessage %>
+        </p>
+     <% } %>
+
+     <form action="" method="post">
+        <label for="candidate">Select a Candidate:</label>
+        <br><br>
+        <input type="radio" name="candidate" value="candidate1">
+        <label for="candidate1">Narendra Modi</label>
+        <br><br>
+        <input type="radio" name="candidate" value="candidate2">
+        <label for="candidate2">Rahul Gandhi</label>
+        <br><br>
+        <input type="radio" name="candidate" value="candidate3">
+        <label for="candidate3">Arvind Kejriwal</label>
+        <br><br>
+        <input type="radio" name="candidate" value="candidate4">
+        <label for="candidate4">Mamata Banerjee</label>
+        <br><br>
+        <input type="submit" value="Vote">
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/logout">Logout</a>
+    </form>
+
+
+    <%- include("../layouts/footer.ejs") %>
+
+                

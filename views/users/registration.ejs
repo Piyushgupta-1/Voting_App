@@ -1,0 +1,29 @@
+<%- include("../layouts/header.ejs") %>
+
+    <h1>Register Page</h1>
+
+    <% if (typeof errorMessage !== "undefined") { %>
+        <p style="color: red;"><%= errorMessage %></p>
+    <% } else if (typeof successMessage !== "undefined") { %>
+        <p style="color: green;"><%= successMessage %></p>
+    <% } %>
+
+    <form action="" method="post">
+        <input type="text" name="username" placeholder="USERNAME" required> <br><br>
+        <input type="password" name="password" placeholder="PASSWORD" required> <br><br>
+        <input type="email" name="email" placeholder="EMAIL ID" required> <br><br>
+        <input type="tel" name="mobile" placeholder="PHONE NO." required> <br><br>
+        <label for="role">Select Role:</label>
+        <select name="role" id="role">
+            <option value="voter">Voter</option>
+            <option value="admin">Admin</option>
+        </select>
+        <br><br>
+        <input type="submit" value="REGISTER">
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="login">LOGIN</a>
+    </form>
+
+    
+
+    <%- include("../layouts/footer.ejs") %>

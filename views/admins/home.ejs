@@ -1,0 +1,19 @@
+<%- include("../layouts/header.ejs") %>
+
+<h1>Admin Home Page</h1>
+
+<table>
+    <tr>
+        <th>Candidate</th>
+        <th>Votes</th>
+    </tr>
+    <% voteCounts.forEach(candidate => { %>
+        <tr>
+            <td><%= candidate._id %></td>
+            <td><%= candidate.count %></td>
+        </tr>
+    <% });  %>
+</table>
+<a href="/logout">Logout</a>
+
+<%- include("../layouts/footer.ejs") %>

@@ -1,0 +1,13 @@
+<%- include("../layouts/header.ejs") %>
+
+<h1>Voting Dashboard</h1>
+
+<% if(typeof message !=="undefined" ) { %>
+    <p style="color: red;">
+        <%= message %>
+    </p>
+<% } %>
+
+<a href="/logout">Logout</a>
+
+<%- include("../layouts/footer.ejs") %>
